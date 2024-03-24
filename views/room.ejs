@@ -1,0 +1,48 @@
+<%- include ('header') -%>
+
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <div id="css"></div>
+  <div id="webgl"></div>
+  <img id="speechBubble" src="textures/speech-bubble.png" style="content-visibility: hidden;" />
+
+  <div style="z-index: 10; position: absolute; top: 45px; width: 100%;">
+    <div style="padding-bottom: 10px;">
+      <select id="chatRoomSelect">
+        <option value="room_1" selected>Room 1</option>
+        <option value="room_2">Room 2</option>
+        <option value="room_3">Room 3</option>
+      </select>
+      <% if (locals.user) { %>
+        <input type="hidden" id="username" value="<%= user.username %>">
+        <input id="name" value="<%= user.name %>">
+        <% } else { %>
+          <input type="hidden" id="username" value="Anonymous">
+          <input id="name" value="Anonymous">
+          <% } %>
+    </div>
+  </div>
+
+  <div class="messenger-form" style="z-index: 10; position: absolute; bottom: 0; width: 100%;">
+    <form id="message-form-room">
+      <input type="text" id="message-input" class="messenger-input" placeholder="Type your meesage">
+      <button class="messenger-send-btn" text="A">Send<i class="fas afa-paper-plane"></i></button>
+      <input id="csrf" type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="Scene/Scene.js">
+    $('textarea').autoResize();
+  </script>
+  <!-- <script type="module" src="javascripts/3droom.js">
+    $('textarea').autoResize();
+  </script> -->
+
+  <%- include ('footer') -%>

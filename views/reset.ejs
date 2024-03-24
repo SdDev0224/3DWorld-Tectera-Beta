@@ -1,0 +1,28 @@
+<%- include ('header') -%>
+
+<!-- Sign up -->
+<div class="login">
+	<h1>Reset password</h1>
+
+	<% if (hasMessages) { %>
+	<section class="messages">
+		<% messages.forEach(function(message) { %>
+		<p><%= message %></p>
+		<% }); %>
+	</section>
+	<% } %>
+
+        <form action="/reset" method="post">
+		<label for="username">Email</label>
+		<input id="username" name="username" type="text" autocomplete="username" required>
+		<input id="token" name="token" type="hidden" autocomplete="token" value="" required>
+		<label for="new-password">New password</label>
+		<input id="new-password" name="newpassword" type="password" autocomplete="new-password" required>
+		<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+		<input type="submit" value="Reset password">
+	</form>
+	<br>
+</div>
+  
+
+<%- include ('footer') -%>

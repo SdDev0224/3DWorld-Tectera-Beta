@@ -1,0 +1,31 @@
+<%- include ('header') -%>
+
+<!-- Sign up -->
+<div class="login">
+	<h1>Sign up</h1>
+
+	<% if (hasMessages) { %>
+	<section class="messages">
+		<% messages.forEach(function(message) { %>
+		<p><%= message %></p>
+		<% }); %>
+	</section>
+	<% } %>
+
+	<form action="/signup" method="post">
+		<label for="username">Email</label>
+		<input id="username" name="username" type="text" autocomplete="username" required>
+		<label for="new-password">Password</label>
+		<input id="new-password" name="password" type="password" autocomplete="password" required>
+		<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+		<input type="submit" value="Sign up">
+	</form>
+	<br>
+
+	<p class="help">Already have an account? <a href="/login">Log in</a></p>
+	<hr>
+	<p style="display: none; padding-bottom: 15px; font-size: 12px; color: #999999;">By signing up, you opt-in for receiving emails from drinks.chat.</p>
+</div>
+  
+
+<%- include ('footer') -%>

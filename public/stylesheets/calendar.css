@@ -1,0 +1,59 @@
+.calendar {
+  width: 100%;
+  padding: 5px;
+  background: #eef4ff;
+}
+
+#days {
+  width: 100%;
+  font-size: 100%;
+  padding: 0px;
+}
+
+.day {
+  background: #cfdfff;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.time {
+  width: 100%;
+  padding-top: 20px;
+  font-size: 100%;
+  padding: 5px 0px;
+  display: flex;
+}
+
+.timestatus {
+  width: 200px;
+  margin-left: 20px;
+  padding: 10px 10px;
+  align-items: center;
+  display: flex;
+  background: #afcfff;
+  border-color: #3131D1;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.selected {
+  background: #cdddee;
+}
+
+.event {
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 5px;
+  border-color: #D1D1D1;
+  border-left-color: #57b986;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 0.5em;
+  box-sizing: border-box;
+}
+
+.event .title {
+  color: #57b986;
+  font-size: 200%;
+}

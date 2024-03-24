@@ -1,0 +1,25 @@
+<%- include ('header') -%>
+
+<center>
+<br>
+<h3>Check your Email</h3>
+<p>
+
+  <section class="prompt">
+    <% if (hasMessages) { %>
+    <section class="messages">
+      <% messages.forEach(function(message) { %>
+      <p><%= message %></p>
+      <% }); %>
+    </section>
+    <% } %>
+    <br>
+    <p class="instructions">We sent a link to your email address. Click the link in that email to log in.</p>
+    <br>
+    <p class="help">Didn't receive the email? <a href="/login">Get another link</a>.</p>
+  </section>
+
+</p>
+</center>
+
+<%- include ('footer') -%>

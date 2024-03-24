@@ -1,0 +1,17 @@
+# List
+df -h
+
+# Clean up
+sudo rm -rf /var/log/*
+sudo rm -rf /usr/share/qt5/doc
+sudo apt --fix-broken install 
+sudo apt clean; sudo apt autoremove --purge
+
+# List var
+du -S /var 2>/dev/null | sort -nr | head -25
+
+# List all
+du -PSshx /* 2>/dev/null
+du -S / 2>/dev/null | sort -nr | head -25
+du -S /usr 2>/dev/null | sort -nr | head -25
+

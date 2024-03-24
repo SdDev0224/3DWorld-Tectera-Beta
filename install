@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# If Linux
+if [[ $(uname) == Linux* ]]; then
+  # Update system
+  sudo apt update
+  sudo apt upgrade
+
+  # Install node 16 for Ubuntu 18
+  sudo apt remove nodejs
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
+  sudo npm install -g npm
+
+  # Install service
+  sudo cp teleport.service /etc/systemd/system/
+  sudo systemctl enable teleport
+  sudo systemctl start teleport
+  sudo systemctl status teleport
+  journalctl -u teleport
+fi
+
+# Install modules
+npm install passport passport-local express-session ejs nodemon connect-sqlite3 csurf connect-ensure-login body-parser openai

@@ -1,0 +1,131 @@
+.body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0rem;
+}
+
+#logoli {
+  width: 250px;
+}
+
+#logo {
+  width: 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.text {
+  padding: 10px;
+  text-align:left;
+}
+
+.canvas3Ddiv {
+    height: 300px; 
+    border-style: solid;
+}
+
+.canvas3D {
+    width: 100%;
+    height: 100%;
+}
+
+video {
+  max-width: 100%;
+  width: 320px;
+}
+
+/* Navigation */
+h4 {
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-right: 0px;
+}
+.navbar-nav {
+    display: width;
+    width: 100%;
+    background-color: #dee4f0;
+}
+nav ul .right {
+  width: 70%;
+  padding-top: 3px;
+  font-size: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Login, signup */
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+}
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 370px;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+    background-color: #2858c7;
+    transition: background-color 0.2s;
+}
+.login p {
+    text-align: center;
+}
+
+
+.table-style {
+  border-collapse: collapse;
+  padding: 10px;
+}
+.table-style th, .table-style td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.table-style th {
+  background-color: #f2f2ff;
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Teleport
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/bin/bash -c "cd /home/ubuntu/Teleport2/Teleport/Web && ./start &> /home/ubuntu/Teleport2/Teleport/Web/teleport.log"
+User=ubuntu
+

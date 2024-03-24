@@ -1,0 +1,46 @@
+<%- include ('header') -%>
+
+<link rel="stylesheet" href="stylesheets/style.css">
+
+<div id="chat">
+
+    <select id="chatRoomSelect">
+        <option value="room_1" selected>Room 1</option>
+        <option value="room_2">Room 2</option>
+        <option value="room_3">Room 3</option>
+    </select>
+
+    <% if (locals.user) { %>
+        <input type="hidden" id="username" value="<%= user.username %>">
+        <input id="name" value="<%= user.name %>">
+    <% } else { %>
+        <input type="hidden" id="username" value="Anonymous">
+        <input id="name" value="Anonymous">
+    <% } %>
+
+    <div>
+        <!-- Room -->
+        <div class="canvas3Ddiv">
+          <canvas class="canvas3D" id="c"></canvas>
+        </div>
+
+        <!-- Chat -->
+        <div class="messenger-body">
+            <div class="messenger-content">
+                <div class="messenger-message-wrapper">
+                    <ul class="messenger-message-list" id="messages"></ul>
+                </div>
+                <div class="messenger-form">
+                    <form id="message-form">
+                        <input type="text" id="message-input" class="messenger-input" autocomplete="off" placeholder="">
+                        <button class="messenger-send-btn" text="A">Send<i class="fas afa-paper-plane"></i></button>
+                        <input id="csrf" type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include ('footer') -%>

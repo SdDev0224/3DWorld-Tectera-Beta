@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Drinks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+  <link rel="stylesheet" href="/stylesheets/calendar.css" />
+</head>
+
+<body class="body" id="body">
+
+  <nav class="navbar-expand" style="flex: 0; height: 40px;">
+
+    <div class="nav">
+
+      <ul class="navbar-nav">
+
+        <!-- Logo -->
+        <li id="logoli">
+          <h4><a href="/"><span><img id="logo" src="/images/drinks.png">Drinks</span></a></h4>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/chat"><b>Chat</b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/video"><b>Video</b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/about"><b>About</b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/room"><b>Room</b></a>
+        </li>
+
+        <% if (typeof user !='undefined' ) { %>
+
+          <!-- Email -->
+          <li class="nav-item right">
+            <a class="nav-link" href="/account"><b>
+                <%= user.username %>
+              </b></a>
+          </li>
+
+          <% } else { %>
+
+            <!-- Log in, sign up -->
+            <li class="nav-item right">
+              <a class="nav-link" href="/login"><b>Log in</b></a>
+              <a class="nav-link" href="/signup"><b>Sign up</b></a>
+            </li>
+
+            <% } %>
+
+      </ul>
+    </div>
+  </nav>

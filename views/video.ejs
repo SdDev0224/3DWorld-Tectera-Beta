@@ -1,0 +1,23 @@
+<%- include ('header') -%>
+
+  <div id="chat" style="text-align: center;">
+
+    <div id="startChat" style="margin-top: 20px; background: #aaccdd; width: 200px; height: 40px; " class="btn border">Start</div>
+
+    <!-- WebRTC -->
+    <div id="videos">
+      <video id="localVideo" autoplay playsinline muted></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+    <!-- Device select -->
+    <div class="dot" style="display: inline-block;">...</div>
+    <div class="sources" style="display: none;">
+      <div class="select" style="display: inline-block;"><label for="videoSource"></label><select id="videoSource"></select></div>
+      <div class="select" style="display: inline-block;"><label for="audioSource"></label><select id="audioSource"></select></div>
+      <div class="select" style="display: inline-block;"><label for="audioOutput"></label><select id="audioOutput"></select></div>
+    </div>
+
+  </div>
+
+<%- include ('footer') -%>

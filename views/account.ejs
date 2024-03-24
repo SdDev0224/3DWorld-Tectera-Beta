@@ -1,0 +1,22 @@
+<%- include ('header') -%>
+
+<center>
+<h1>Account</h1>
+<p>
+
+  <!-- Users -->
+  <div id="users">
+  </div>
+
+  <!-- Log out -->
+  <form action="/logout" method="post">
+    <a class="nav-link" href="/logout" class="logout" type="submit"><b>Log out</b></a>
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+  </form>
+
+</p>
+</center>
+
+<%- include ('footer') -%>
+
+<script src="/javascripts/users.js"></script>
