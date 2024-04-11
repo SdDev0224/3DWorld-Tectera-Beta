@@ -6,13 +6,6 @@ function chat() {
   // Get input
   var input = $("#message-input");
   if (!input.length) return;
-
-  // var input1 = $("#message-input-room")
-  // console.log(input1.val('').trim())
-
-  // Focus text box on load
-  //$("#message-input").focus();
-
   // Connect socket
   socket = io();
   socket.on("connect", () => {
